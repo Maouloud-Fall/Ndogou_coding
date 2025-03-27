@@ -1,0 +1,77 @@
+/* Style pour le corps */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Style pour l'en-tête (header) */
+header {
+    background-color: #3498db;
+    padding: 15px;
+    width: 100%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header .menu {
+    display: flex;
+    justify-content: center;
+}
+
+header .menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+header .menu ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+header .menu ul li a:hover {
+    background-color: #1d6fa5;
+}
+
+/* Style pour le conteneur principal */
+.container {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 600px;
+    text-align: center;
+    margin-top: 30px;
+}
+
+h1 {
+    color: #3498db;
+    margin-bottom: 20px;
+}
+
+p {
+    color: #555555;
+    line-height: 1.6;
+}
+
+a {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}

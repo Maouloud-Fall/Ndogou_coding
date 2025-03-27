@@ -1,0 +1,284 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e8f5e9;
+}
+.h2 {
+    color: #3498db;
+    text-align: center;
+}
+/* En-tête */
+header {
+    background-color: #3498db;
+    padding: 15px;
+    color: white;
+    text-align: center;
+}
+
+header .menu {
+    display: flex;
+    justify-content: center;
+}
+
+header .menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 15px;
+}
+
+header .menu ul li {
+    display: inline-block;
+}
+
+header .menu ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+header .menu ul li a:hover {
+    background-color: #1d6fa5;
+}
+
+/* Bannière */
+.banner {
+    background-color: #1d6fa5; /* Couleur de fond */
+    color: black; /* Couleur du texte en noir */
+    text-align: center; /* Texte centré */
+    padding: 20px; /* Espacement intérieur */
+    font-size: 1.5rem; /* Taille du texte */
+    margin-bottom: 20px; /* Espace sous la bannière */
+}
+
+/* Section principale avec l'image en arrière-plan */
+.background {
+    background-image: url('assets/images/drift.jpg'); /* Chemin vers l'image */
+    background-size: cover; /* L'image couvre toute la section */
+    background-position: center; /* L'image est centrée */
+    height: 70vh; /* Hauteur de la fenêtre visible */
+    color: white; /* Couleur du texte par défaut */
+    display: flex;
+    justify-content: center; /* Centre horizontalement le contenu */
+    align-items: center; /* Centre verticalement le contenu */
+    text-align: center;
+}
+
+.background a {
+    text-decoration: none; /* Supprime la ligne sous le lien */
+    color: white; /* Définit la couleur du lien en blanc */
+}
+
+.background a:hover {
+    text-decoration: underline; /* Ajoute une ligne au survol (optionnel) */
+}
+
+.background h1, .background p {
+    color: white; /* Assure que le texte, y compris le titre et le paragraphe, reste blanc */
+}
+
+
+/* Disposition principale */
+.main-layout {
+    display: flex;
+    margin: 20px;
+}
+
+aside {
+    width: 25%;
+    background-color: #f4f4f4;
+    padding: 20px;
+    box-shadow: 2px 0 6px rgba(0, 0, 0, 0.1);
+}
+
+aside h2 {
+    margin-top: 0;
+    color: #3498db;
+}
+
+aside ul {
+    list-style: none;
+    padding: 0;
+}
+
+aside ul li a:hover {
+    color: #3498db;
+}
+
+.articles {
+    width: 75%;
+    padding: 20px;
+    background-color: white;
+}
+
+.articles h1 {
+    color: #3498db;
+}
+
+.articles p {
+    color: #555555;
+    line-height: 1.6;
+}
+
+/* Conteneur du slider */
+h2 {
+    text-align: center;
+    color: #3498db;
+    margin-top: 20px;
+}
+
+/* Conteneur du slider */
+.slider-container {
+    position: relative;
+    max-width: 80%;
+    margin: 20px auto;
+    overflow: hidden; /* Masque les éléments hors du conteneur */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Images dans le slider */
+.slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out; /* Animation fluide */
+}
+
+.slider div {
+    min-width: 33.33%; /* Chaque slide occupe 1/3 du conteneur */
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+.slider img {
+    width: 100%;
+    height: 250px; /* Hauteur uniforme */
+    object-fit: cover; /* Ajuste l'image sans déformation */
+    border-radius: 8px;
+}
+
+/* Boutons de navigation */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 18px;
+    z-index: 10;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.prev:hover, .next:hover {
+    background-color: #3498db;
+}
+
+/* Texte sous les images */
+.slider-caption {
+    text-align: center;
+    margin-top: 5px;
+    font-size: 14px;
+    color: #555555;
+}
+.slider img:hover {
+    transform: scale(1.1); /* Agrandit légèrement l'image au survol */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Renforce l'ombre au survol */
+}
+
+/* Section de l'équipe */
+.team-container {
+    display: flex; /* Organiser en rangées horizontales */
+    justify-content: center; /* Centrer horizontalement */
+    flex-wrap: wrap; /* Permet le passage à la ligne si nécessaire */
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.team-member {
+    flex: 1 1 200px; /* Taille adaptable */
+    max-width: 300px;
+    margin: 10px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: box-shadow 0.3s;
+}
+
+.team-member:hover {
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.team-member img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    object-fit: cover;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.team-member h2 {
+    margin: 10px 0;
+    color: #3498db;
+}
+
+.team-member p {
+    margin: 5px 0;
+    color: #555555;
+}
+
+/* Pied de page */
+footer {
+    display: flex;
+    justify-content: space-between; /* Espace entre le texte et les icônes */
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: white;
+}
+
+footer p {
+    margin: 0;
+}
+
+footer .social-icons {
+    display: flex;
+    gap: 15px; /* Espacement entre les icônes */
+    margin-right: 0; /* Pour bien les positionner à droite */
+}
+
+footer .social-icons a {
+    text-decoration: none;
+    transition: transform 0.3s;
+}
+
+footer .social-icons a:hover {
+    transform: scale(1.1); /* Agrandissement au survol */
+}
+footer .map {
+    margin-top: 20px;
+    border-radius: 10px;
+    overflow: hidden; /* Permet d'avoir des bords arrondis pour la carte */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
