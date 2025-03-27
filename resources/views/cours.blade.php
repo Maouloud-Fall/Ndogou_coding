@@ -103,18 +103,6 @@
     <div>
         <h2 class="h2">Cours</h2>
         <p>Voici la liste des cours disponibles :</p>
-
-        <!-- Afficher les détails des cours -->
-        @foreach($cours as $course)
-            <div style="margin-bottom: 20px; padding: 10px; border: 1px solid #3498db; border-radius: 5px;">
-                <h3>{{ $course->title }}</h3>
-                <p><strong>Description :</strong> {{ $course->description }}</p>
-                <p><strong>Durée :</strong> {{ $course->duration }} heures</p>
-            </div>
-        @endforeach
-    </div>
-
-
     </div>
 
 </body>
