@@ -347,27 +347,27 @@
         <!-- Slider -->
         <div class="slider">
             <div>
-                <a href="/about"><img src="assets/images/img1.jpg" alt="Image 1"></a>
+                <a href="/cours"><img src="assets/images/img1.jpg" alt="Image 1"></a>
                 <p class="slider-caption">Suivez votre cours d'IA</p>
             </div>
             <div>
-                <a href=""><img src="assets/images/img2.jpeg" alt="Image 2"></a>
+                <a href="cours"><img src="assets/images/img2.jpeg" alt="Image 2"></a>
                 <p class="slider-caption">Suivez votre cours de réseau telecom</p>
             </div>
             <div>
-                <a href=""><img src="assets/images/img3.jpg" alt="Image 3"></a>
+                <a href="cours"><img src="assets/images/img3.jpg" alt="Image 3"></a>
                 <p class="slider-caption">Cours d'intelligence artificielle</p>
             </div>
             <div>
-                <a href=""><img src="assets/images/img5.jpg" alt="Image 5"></a>
+                <a href="cours"><img src="assets/images/img5.jpg" alt="Image 5"></a>
                 <p class="slider-caption">Suivez votre cours d'IA</p>
             </div>
             <div>
-                <a href=""><img src="assets/images/img6.jpg" alt="Image 6"></a>
+                <a href="cours"><img src="assets/images/img6.jpg" alt="Image 6"></a>
                 <p class="slider-caption">Suivez votre cours d'IA</p>
             </div>
             <div>
-                <a href=""><img src="assets/images/img7.jpg" alt="Image 7"></a>
+                <a href="cours"><img src="assets/images/img7.jpg" alt="Image 7"></a>
                 <p class="slider-caption">Suivez votre cours d'IA</p>
             </div>
         </div>

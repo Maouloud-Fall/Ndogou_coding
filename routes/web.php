@@ -2,7 +2,8 @@
 
 use Illuminate\Support\Facades\Route; // Importation de la classe Route pour définir des routes dans l'application.
 use Illuminate\Support\Facades\Auth;  // Importation du module Auth pour gérer l'authentification.
-use Illuminate\Http\Request;          // Importation de Request pour manipuler les données des requêtes HTTP.
+use Illuminate\Http\Request;  // Importation de Request pour manipuler les données des requêtes HTTP.
+use App\Http\Controllers\CourseController; // Importation du contrôleur CourseController pour gérer les cours.
 
 // Route pour la page d'accueil par défaut.
 Route::get('/', function () {
@@ -90,9 +91,14 @@ Route::post('/contact', function (Request $request) {
     ]);
 
     // Insérer les données dans la table "contact".
-    \App\Models\Contact::create($validatedData);
+    //\App\Models\Contact::create($validatedData);
 
     // Rediriger avec un message de succès.
     return back()->with('success', 'Merci de nous avoir contactés ! Votre message a bien été enregistré.');
 });
 
+
+// Route pour afficher la page de cours.
+Route::get('/cours', function () {
+    return view('cours'); // Charge et renvoie la vue "team".
+});
