@@ -142,6 +142,7 @@
         <nav class="menu">
             <ul>
                 <li><a href="/accueil">Accueil</a></li>
+                <li><a href="/formation">Formation</a></li>
                 <li><a href="/about">À propos</a></li>
                 <li><a href="/team">Equipe</a></li>
                 <li><a href="/contact">Contact</a></li>
@@ -151,72 +152,65 @@
     <div class="team-container">
         <!-- Membre 1 -->
         <div class="team-member">
-            <img src="assets/images/member1.jpg" alt="Photo de M. Fall">
-            <h2>M. Fall</h2>
-            <p>Spécialité : Intelligence Artificielle</p>
-            <p>Fall est un expert en IA avec 10 ans d'expérience dans le domaine et une passion pour l'enseignement.</p>
+            <img src="assets/images/member6.jpg" alt="Photo de M. Ndiaye">
+            <h2>Mouhamadou Ndiaye</h2>
+            <p>Rôle : PDG de l'IBMS</p>
+            <p>Ndiaye dirige l'IBMS avec vision et expertise, mettant à profit ses compétences en développement et gestion pour inspirer l'innovation et l'excellence au sein de l'organisation.</p>
         </div>
         <!-- Membre 2 -->
         <div class="team-member">
             <img src="assets/images/member2.jpg" alt="Photo de M. Ciss">
-            <h2>M. Ciss</h2>
-            <p>Spécialité : Réseau Telecom</p>
-            <p>Ciss est une ingénieure en télécommunications qui aime partager ses connaissances pratiques.</p>
+            <h2>Salif Ciss</h2>
+            <p>Responsable du Département IT</p>
+            <p>Ciss est un expert en technologies de l'information et en télécommunications, avec une solide expérience dans la gestion d'équipes et le développement de solutions innovantes.</p>
         </div>
         <!-- Membre 3 -->
         <div class="team-member">
             <img src="assets/images/member3.jpg" alt="Photo de M. Ndiaye">
-            <h2>M. Ndiaye</h2>
+            <h2>Amadou Moustapha Deme</h2>
             <p>Spécialité : Développement Mobile</p>
-            <p>Ndiaye est un développeur mobile reconnu pour ses applications innovantes et ses cours interactifs.</p>
+            <p>Deme est un développeur mobile reconnu pour ses applications innovantes et ses cours interactifs.</p>
         </div>
         <!-- Membre 4 -->
         <div class="team-member">
             <img src="assets/images/member4.jpg" alt="Photo de Deme">
-            <h2>Deme</h2>
-            <p>Spécialité : Bases de Données</p>
-            <p>Deme est une spécialiste des bases de données avec une approche méthodique et claire.</p>
+            <h2>Abdou Karim Ciss</h2>
+            <p>Spécialité : Stagiaire</p>
+            <p>Ciss est un stagiaire passionné par la création et l'innovation, avec une curiosité intense pour les nouvelles technologies et le développement.</p>
         </div>
         <!-- Membre 5 -->
         <div class="team-member">
             <img src="assets/images/member5.jpg" alt="Photo de Amadou Diop">
-            <h2>Amadou Diop</h2>
-            <p>Spécialité : Cybersécurité</p>
-            <p>Amadou est un consultant en cybersécurité qui enseigne comment protéger vos données efficacement.</p>
+            <h2>Ababacar Ndiaye</h2>
+            <p>Spécialité : Designer</p>
+            <p>Ndiaye est un designer innovateur passionné par les nouvelles technologies et le design responsable.</p>
         </div>
         <!-- Membre 6 -->
         <div class="team-member">
-            <img src="assets/images/member6.jpg" alt="Photo de Sophie Ndongue">
-            <h2>Sophie Ndongue</h2>
-            <p>Spécialité : Gestion de Projets</p>
-            <p>Sophie aide les étudiants à organiser leurs idées et à réussir leurs projets avec des méthodes modernes.</p>
+            <img src="assets/images/member1.jpg" alt="Photo de M. Fall">
+            <h2>Maouloud Fall</h2>
+            <p>Spécialité : Stagiaire</p>
+            <p>Fall est une stagiaire dynamique et créative, passionnée par le développement web et l'innovation.</p>
         </div>
         <!-- Membre 7 -->
         <div class="team-member">
-            <img src="assets/images/member7.jpg" alt="Photo de Fatou Fall">
-            <h2>Fatou Fall</h2>
-            <p>Spécialité : Développement Web</p>
-            <p>Fatou crée des sites interactifs et enseigne les bases du HTML, CSS, et JavaScript.</p>
-        </div>
-        <!-- Membre 8 -->
-        <div class="team-member">
-            <img src="assets/images/member8.jpg" alt="Photo de M. Diop">
-            <h2>M. Diop</h2>
-            <p>Spécialité : Analyse de Données</p>
-            <p>Diop travaille avec Python et R pour enseigner les techniques avancées d'analyse de données.</p>
+            <img src="assets/images/member7.jpg" alt="Photo de Ndeye Touty Sarr">
+            <h2>Ndeye Touty Sarr</h2>
+            <p>Rôle : Stagiaire en Secrétariat</p>
+            <p>Sarr contribue activement aux tâches administratives et acquiert des compétences précieuses dans la gestion et la coordination de projets.</p>
         </div>
     </div>
 </body>
 <footer>
     <p>© 2025 Mon Site Web. Tous droits réservés.</p>
-    <p>Contactez-nous : <a href="mailto:contact@monsiteweb.com">contact@monsiteweb.com</a></p>
+    <p>Contactez-nous : <a href="mailto:ibmssenegal@gmail.com">ibmssenegal@gmail.com</a></p>
     
     <!-- Icônes des réseaux sociaux -->
     <div class="social-icons">
         <a href="https://facebook.com" target="_blank" aria-label="Facebook"><i class="fab fa-facebook fa-2x" style="color: #4267B2;"></i></a>
-        <a href="https://twitter.com" target="_blank" aria-label="Twitter"><i class="fab fa-twitter fa-2x" style="color: #1DA1F2;"></i></a>
-        <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fab fa-instagram fa-2x" style="color: #C13584;"></i></a>
-        <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin fa-2x" style="color: #0A66C2;"></i></a>
+        <a href="https://www.instagram.com/ibmssenegal" target="_blank" aria-label="Instagram"><i class="fab fa-instagram fa-2x" style="color: #C13584;"></i></a>
+        <a href="https://sn.linkedin.com/company/informatique-business-and-management-skills" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin fa-2x" style="color: #0A66C2;"></i></a>
+        <a href="https://www.tiktok.com/@ibmssenegal" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok fa-2x" style="color: #69C9D0;"></i></a>
     </div>
 
     <!-- Carte de localisation -->

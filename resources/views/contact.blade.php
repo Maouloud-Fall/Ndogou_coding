@@ -1,41 +1,3 @@
-<?php
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
-
-// Connexion à la base de données
-$servername = "localhost";
-$username = "root"; 
-$password = ""; 
-$database = "database"; // Remplacez par le nom réel de votre base de données
-
-$conn = new mysqli($servername, $username, $password, $database);
-
-// Vérification de la connexion
-if ($conn->connect_error) {
-    die("Connexion échouée : " . $conn->connect_error);
-}
-
-// Traitement du formulaire
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $nom = $conn->real_escape_string($_POST['nom']);
-    $email = $conn->real_escape_string($_POST['email']);
-    $message = $conn->real_escape_string($_POST['message']);
-    $date_envoi = date('Y-m-d H:i:s');
-
-    $sql = "INSERT INTO contact (nom, email, message) VALUES ('$nom', '$email', '$message', '$date_envoi')";
-
-    if ($conn->query($sql) === TRUE) {
-        // Message de succès
-        $successMessage = "Votre message a bien été envoyé ! Merci de nous avoir contactés.";
-    } else {
-        // Message d'erreur
-        $errorMessage = "Erreur : " . $conn->error;
-    }
-    $conn->close(); // Fermer la connexion après exécution
-}
-?>
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -89,79 +51,87 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             background-color: #1d6fa5;
         }
 
-        /* Contenu principal */
-        .content-wrapper {
-            flex: 1;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+        /* Style de base */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+
+         /* Style global */
+         body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
         }
 
         .container {
-            background-color: #ffffff;
-            padding: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 15px; /* Espacement entre la carte et le formulaire */
+        }
+
+        .map-wrapper,
+        .form-wrapper {
+            flex: 1; /* Permet aux deux sections d'occuper la même largeur */
+            height: 400px; /* Hauteur uniforme */
+            box-sizing: border-box;
+        }
+
+        .map-wrapper iframe {
+            width: 100%;
+            height: 100%;
+        }
+
+        .form-wrapper {
+            background-color: #fff;
             border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            max-width: 400px;
-            width: 90%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 350px;
             text-align: center;
         }
 
-        h1 {
-            color: #3498db;
+        form h1 {
+            font-size: 24px;
             margin-bottom: 20px;
-        }
-
-        form {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
+            color: #333;
         }
 
         label {
-            font-weight: bold;
-            color: #555555;
-        }
-
-        input, textarea {
-            padding: 10px;
-            border: 1px solid #cccccc;
-            border-radius: 5px;
+            display: block;
             font-size: 14px;
-            width: 100%;
+            margin: 10px 0 5px;
+            color: #666;
         }
 
-        textarea {
-            resize: none;
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
         }
 
         button {
-            padding: 10px 15px;
-            background-color: #3498db;
+            background-color: #4CAF50;
             color: white;
             border: none;
+            padding: 10px 20px;
             border-radius: 5px;
-            font-size: 16px;
             cursor: pointer;
+            font-size: 16px;
         }
 
         button:hover {
-            background-color: #1d6fa5;
+            background-color: #45a049;
         }
 
-        .message {
-            margin-bottom: 20px;
-            font-size: 14px;
-            font-weight: bold;
-        }
 
-        .success {
-            color: green;
-        }
 
-        .error {
-            color: red;
-        }
 
         /* Pied de page */
         footer {
@@ -205,6 +175,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <nav class="menu">
             <ul>
                 <li><a href="/accueil">Accueil</a></li>
+                <li><a href="/formation">Formation</a></li>
                 <li><a href="/about">À propos</a></li>
                 <li><a href="/team">Equipe</a></li>
                 <li><a href="/contact">Contact</a></li>
@@ -212,19 +183,25 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </nav>
     </header>
 
-    <!-- Contenu principal -->
-    <div class="content-wrapper">
-        <div class="container">
-            <h1>Contactez-nous</h1>
+<!-- Contenu principal -->  
+<div class="container">
+    <!-- Section Carte -->
+    <div class="map-wrapper">
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23335.743084304136!2d-16.9516021!3d14.7614194!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xec195590eebab6b%3A0x350740f27a87b582!2sR%C3%A9sidence%20Senghor%20-%20THI%C3%88S!5e0!3m2!1sfr!2ssn!4v1688475123456"
+            width="100%"
+            height="300px"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            aria-label="Carte de Résidence Senghor à Thiès">
+        </iframe>
+    </div>
 
-            <!-- Afficher les messages de succès ou d'erreur -->
-            <?php if (!empty($successMessage)): ?>
-                <p class="message success"><?= htmlspecialchars($successMessage); ?></p>
-            <?php elseif (!empty($errorMessage)): ?>
-                <p class="message error"><?= htmlspecialchars($errorMessage); ?></p>
-            <?php endif; ?>
-
-            <!-- Formulaire de contact -->
+    <!-- Section Formulaire -->
+    <div class="form-wrapper">
+        <div class="form-section">
+            <h1>Veillez nous contacter</h1>
             <form method="post" action="">
                 <label for="nom">Nom :</label>
                 <input type="text" id="nom" name="nom" placeholder="Votre nom" required>
@@ -232,25 +209,27 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <label for="email">Email :</label>
                 <input type="email" id="email" name="email" placeholder="Votre email" required>
 
-                <label for="message">Message :</label>
-                <textarea id="message" name="message" rows="5" placeholder="Votre message" required></textarea>
+                <label for="password">Mot de passe :</label>
+                <input type="password" id="password" name="password" placeholder="Votre mot de passe" required>
 
-                <button type="submit">Envoyer</button>
+                <button type="submit">S'inscrire</button>
             </form>
         </div>
     </div>
+</div>
+
 </body>
 <!-- Pied de page -->
 <footer>
     <p>© 2025 Mon Site Web. Tous droits réservés.</p>
-    <p>Contactez-nous : <a href="mailto:contact@monsiteweb.com">contact@monsiteweb.com</a></p>
+    <p>Contactez-nous : <a href="mailto:ibmssenegal@gmail.com">ibmssenegal@gmail.com</a></p>
     
     <!-- Icônes des réseaux sociaux -->
     <div class="social-icons">
         <a href="https://facebook.com" target="_blank" aria-label="Facebook"><i class="fab fa-facebook fa-2x" style="color: #4267B2;"></i></a>
-        <a href="https://twitter.com" target="_blank" aria-label="Twitter"><i class="fab fa-twitter fa-2x" style="color: #1DA1F2;"></i></a>
-        <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fab fa-instagram fa-2x" style="color: #C13584;"></i></a>
-        <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin fa-2x" style="color: #0A66C2;"></i></a>
+        <a href="https://www.instagram.com/ibmssenegal" target="_blank" aria-label="Instagram"><i class="fab fa-instagram fa-2x" style="color: #C13584;"></i></a>
+        <a href="https://sn.linkedin.com/company/informatique-business-and-management-skills" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin fa-2x" style="color: #0A66C2;"></i></a>
+        <a href="https://www.tiktok.com/@ibmssenegal" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok fa-2x" style="color: #69C9D0;"></i></a>
     </div>
 
     <!-- Carte de localisation -->

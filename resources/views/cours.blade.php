@@ -103,6 +103,43 @@
     <div>
         <h2 class="h2">Cours</h2>
         <p>Voici la liste des cours disponibles :</p>
+        <div class="map">
+            <!-- Carte IFrame -->
+            <iframe src="https://www.google.com/maps/embed/v1/place?key=YOUR_GOOGLE_MAPS_API_KEY&q=place_id:ChIJy85X-t46d0YR1589u8z-e80" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+    
+                <!-- Carte avec des informations de cours -->
+            <div class="course-info">
+                <h3>Nom du Cours</h3>
+                <p>Description du cours : Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <p>Durée : 3 mois</p>
+                <p>Prix : 30000 FCFA</p>
+                <p>Formateur : John Doe</p>
+                <a href="#" class="button">S'inscrire</a>
+            </div>
+            <div class="course-info">
+                <h3>Nom du Cours</h3>
+                <p>Description du cours : Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <p>Durée : 3 mois</p>
+                <p>Prix : 30000 FCFA</p>
+                <p>Formateur : John Doe</p>
+                <a href="#" class="button">S'inscrire</a>
+            </div>
+            <div class="course-info">
+                <h3>Nom du Cours</h3>
+                <p>Description du cours : Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <p>Durée : 3 mois</p>
+                <p>Prix : 30000 FCFA</p>
+                <p>Formateur : John Doe</p>
+                <a href="#" class="button">S'inscrire</a>
+            </div>
+            <div class="course-info">
+                <h3>Nom du Cours</h3>
+                <p>Description du cours : Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <p>Durée : 3 mois</p>
+                <p>Prix : 30000 FCFA</p>
+                <p>Formateur : John Doe</p>
+                <a href="#" class="button">S'inscrire</a>
+            </div>
     </div>
 
 </body>
@@ -112,9 +149,9 @@
     <!-- Icônes des réseaux sociaux -->
     <div class="social-icons">
         <a href="https://facebook.com" target="_blank" aria-label="Facebook"><i class="fab fa-facebook fa-2x" style="color: #4267B2;"></i></a>
-        <a href="https://twitter.com" target="_blank" aria-label="Twitter"><i class="fab fa-twitter fa-2x" style="color: #1DA1F2;"></i></a>
         <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fab fa-instagram fa-2x" style="color: #C13584;"></i></a>
-        <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin fa-2x" style="color: #0A66C2;"></i></a>
+        <a href="https://www.linkedin.com" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin fa-2x" style="color: #0A66C2;"></i></a>
+        <a href="https://www.tiktok.com" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok fa-2x" style="color: #69C9D0;"></i></a>
     </div>
 
     <!-- Carte de localisation -->

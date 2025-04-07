@@ -99,6 +99,6 @@ Route::post('/contact', function (Request $request) {
 
 
 // Route pour afficher la page de cours.
-Route::get('/cours', function () {
-    return view('cours'); // Charge et renvoie la vue "team".
+Route::get('/formation', function () {
+    return view('formation'); // Charge et renvoie la vue "team".
 });
