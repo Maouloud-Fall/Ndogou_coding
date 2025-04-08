@@ -75,11 +75,11 @@
         }
 
          /* Pied de page */
-         footer {
+        footer {
             display: flex;
             justify-content: space-between; /* Espace entre le texte et les icônes */
             align-items: center;
-            padding: 10px 20px;
+            padding: 5px 10px; /* Réduction de l'espacement interne */
             background-color: #3498db;
             color: white;
         }
@@ -90,8 +90,8 @@
 
         footer .social-icons {
             display: flex;
-            gap: 15px; /* Espacement entre les icônes */
-            margin-right: 0; /* Pour bien les positionner à droite */
+            gap: 10px; /* Réduction de l'espace entre les icônes */
+            margin-right: 0;
         }
 
         footer .social-icons a {
@@ -102,11 +102,12 @@
         footer .social-icons a:hover {
             transform: scale(1.1); /* Agrandissement au survol */
         }
+
         footer .map {
-            margin-top: 20px;
+            margin-top: 10px; /* Réduction de la marge supérieure */
             border-radius: 10px;
             overflow: hidden; /* Permet d'avoir des bords arrondis pour la carte */
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Réduction de l'effet d'ombre */
         }
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -141,55 +142,120 @@
         <h2>Nos Formations Disponibles</h2>
         <div class="formations-grid">
             <div class="formation">
-                <img src="assets/images/burautique.jpg" alt="Formation en Informatique" style="width: 100%; border-radius: 10px;">
-                <h3>Formation en Bureautique</h3>
-                <p>Découvrez comment utiliser des outils de bureautique pour travailler plus efficacement.</p>
-                <a href="#" class="button">En savoir plus</a>
-                <a href="#" class="button">Réserver</a>
-                <div class="social-icons">
-                    <a href="#"><i class="fab fa-facebook-square"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                <img src="assets/images/burautique.jpg" alt="Formation en Bureautique" style="width: 100%; border-radius: 10px;">
+                <h3 style="font-size: 1.8em; color: #2c3e50; margin-top: 10px;">Formation en Bureautique</h3>
+                <p style="font-size: 1.1em; color: #34495e; line-height: 1.6;">
+                    Maîtrisez les outils essentiels de bureautique pour améliorer votre productivité et travailler avec efficacité.
+                </p>
+                <div style="margin-top: 20px;">
+                    <a href="#" class="button" style="background-color: #3498db; color: #fff; padding: 10px 20px; text-decoration: none; border-radius: 5px; margin-right: 10px;">
+                        En savoir plus
+                    </a>
+                    <a href="#" class="button" style="background-color: #e74c3c; color: #fff; padding: 10px 20px; text-decoration: none; border-radius: 5px;">
+                        Réserver
+                    </a>
+                </div>
+                <div class="social-icons" style="margin-top: 15px;">
+                    <a href="#" style="margin-right: 10px; color: #3b5998;">
+                        <i class="fab fa-facebook-square" style="font-size: 1.5em;"></i>
+                    </a>
+                    <a href="#" style="margin-right: 10px; color: #00acee;">
+                        <i class="fab fa-twitter" style="font-size: 1.5em;"></i>
+                    </a>
+                    <a href="#" style="margin-right: 10px; color: #833ab4;">
+                        <i class="fab fa-instagram" style="font-size: 1.5em;"></i>
+                    </a>
+                    <a href="#" style="color: #0e76a8;">
+                        <i class="fab fa-linkedin" style="font-size: 1.5em;"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="formation" style="margin-top: 40px;">
+                <img src="assets/images/infographie.jpg" alt="Formation en Infographie" style="width: 100%; border-radius: 10px;">
+                <h3 style="font-size: 1.8em; color: #2c3e50; margin-top: 10px;">Formation en Infographie</h3>
+                <p style="font-size: 1.1em; color: #34495e; line-height: 1.6;">
+                    Développez vos compétences en création graphique et concevez des visuels percutants pour tous vos projets.
+                </p>
+                <div style="margin-top: 20px;">
+                    <a href="#" class="button" style="background-color: #3498db; color: #fff; padding: 10px 20px; text-decoration: none; border-radius: 5px; margin-right: 10px;">
+                        En savoir plus
+                    </a>
+                    <a href="#" class="button" style="background-color: #e74c3c; color: #fff; padding: 10px 20px; text-decoration: none; border-radius: 5px;">
+                        Réserver
+                    </a>
+                </div>
+                <div class="social-icons" style="margin-top: 15px;">
+                    <a href="#" style="margin-right: 10px; color: #3b5998;">
+                        <i class="fab fa-facebook-square" style="font-size: 1.5em;"></i>
+                    </a>
+                    <a href="#" style="margin-right: 10px; color: #00acee;">
+                        <i class="fab fa-twitter" style="font-size: 1.5em;"></i>
+                    </a>
+                    <a href="#" style="margin-right: 10px; color: #833ab4;">
+                        <i class="fab fa-instagram" style="font-size: 1.5em;"></i>
+                    </a>
+                    <a href="#" style="color: #0e76a8;">
+                        <i class="fab fa-linkedin" style="font-size: 1.5em;"></i>
+                    </a>
                 </div>
             </div>
             <div class="formation">
-                <img src="assets/images/infographie.jpg" alt="Formation en Informatique" style="width: 100%; border-radius: 10px;">
-                <h3>Formation en Infographie</h3>
-                <p>Apprenez à créer des visuels attrayants et professionnels pour vos projets.</p>
-                <a href="#" class="button">En savoir plus</a>
-                <a href="#" class="button">Réserver</a>
-                <div class="social-icons">
-                    <a href="#"><i class="fab fa-facebook-square"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                <img src="assets/images/marketing.jpg" alt="Formation en Marketing Digital" style="width: 100%; border-radius: 10px;">
+                <h3 style="font-size: 1.8em; color: #2c3e50; margin-top: 10px;">Formation en Marketing Digital</h3>
+                <p style="font-size: 1.1em; color: #34495e; line-height: 1.6;">
+                    Apprenez à utiliser les outils modernes et à maîtriser les stratégies essentielles pour maximiser la visibilité et l’impact de vos produits en ligne.
+                </p>
+                <div style="margin-top: 20px;">
+                    <a href="#" class="button" style="background-color: #3498db; color: #fff; padding: 10px 20px; text-decoration: none; border-radius: 5px; margin-right: 10px;">
+                        En savoir plus
+                    </a>
+                    <a href="#" class="button" style="background-color: #e74c3c; color: #fff; padding: 10px 20px; text-decoration: none; border-radius: 5px;">
+                        Réserver
+                    </a>
+                </div>
+                <div class="social-icons" style="margin-top: 15px;">
+                    <a href="#" style="margin-right: 10px; color: #3b5998;">
+                        <i class="fab fa-facebook-square" style="font-size: 1.5em;"></i>
+                    </a>
+                    <a href="#" style="margin-right: 10px; color: #00acee;">
+                        <i class="fab fa-twitter" style="font-size: 1.5em;"></i>
+                    </a>
+                    <a href="#" style="margin-right: 10px; color: #833ab4;">
+                        <i class="fab fa-instagram" style="font-size: 1.5em;"></i>
+                    </a>
+                    <a href="#" style="color: #0e76a8;">
+                        <i class="fab fa-linkedin" style="font-size: 1.5em;"></i>
+                    </a>
                 </div>
             </div>
             <div class="formation">
-                <img src="assets/images/marketing.jpg" alt="Marketing Digital" style="width: 100%; border-radius: 10px;">
-                <h3>Marketing Digital</h3>
-                <p>Maîtrisez les outils et techniques pour promouvoir vos produits en ligne.</p>
-                <a href="#" class="button">En savoir plus</a>
-                <a href="#" class="button">Réserver</a>
-                <div class="social-icons">
-                    <a href="#"><i class="fab fa-facebook-square"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                <img src="assets/images/program.jpg" alt="Formation de Programmation" style="width: 100%; border-radius: 10px;">
+                <h3 style="font-size: 1.8em; color: #2c3e50; margin-top: 10px;">Formation en Programmation</h3>
+                <p style="font-size: 1.1em; color: #34495e; line-height: 1.6;">
+                    Découvrez les bases fondamentales de la programmation et commencez à créer vos propres applications innovantes.
+                </p>
+                <div style="margin-top: 20px;">
+                    <a href="#" class="button" style="background-color: #3498db; color: #fff; padding: 10px 20px; text-decoration: none; border-radius: 5px; margin-right: 10px;">
+                        En savoir plus
+                    </a>
+                    <a href="#" class="button" style="background-color: #e74c3c; color: #fff; padding: 10px 20px; text-decoration: none; border-radius: 5px;">
+                        Réserver
+                    </a>
                 </div>
-            </div>
-            <div class="formation">
-                <img src="assets/images/img3.jpg" alt="Formation de Programmation" style="width: 100%; border-radius: 10px;">
-                <h3>Formation de Programmation</h3>
-                <p>Apprenez les bases de la programmation et développez vos propres applications.</p>
-                <a href="#" class="button">En savoir plus</a>
-                <a href="#" class="button">Réserver</a>
-                <div class="social-icons">
-                    <a href="#"><i class="fab fa-facebook-square"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                <div class="social-icons" style="margin-top: 15px;">
+                    <a href="#" style="margin-right: 10px; color: #3b5998;">
+                        <i class="fab fa-facebook-square" style="font-size: 1.5em;"></i>
+                    </a>
+                    <a href="#" style="margin-right: 10px; color: #00acee;">
+                        <i class="fab fa-twitter" style="font-size: 1.5em;"></i>
+                    </a>
+                    <a href="#" style="margin-right: 10px; color: #833ab4;">
+                        <i class="fab fa-instagram" style="font-size: 1.5em;"></i>
+                    </a>
+                    <a href="#" style="color: #0e76a8;">
+                        <i class="fab fa-linkedin" style="font-size: 1.5em;"></i>
+                    </a>
                 </div>
             </div>
         </div>

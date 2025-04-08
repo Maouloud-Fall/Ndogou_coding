@@ -106,7 +106,7 @@
             display: flex;
             justify-content: space-between; /* Espace entre le texte et les icônes */
             align-items: center;
-            padding: 10px 20px;
+            padding: 5px 10px; /* Réduction de l'espacement interne */
             background-color: #3498db;
             color: white;
         }
@@ -117,8 +117,8 @@
 
         footer .social-icons {
             display: flex;
-            gap: 15px; /* Espacement entre les icônes */
-            margin-right: 0; /* Pour bien les positionner à droite */
+            gap: 10px; /* Réduction de l'espace entre les icônes */
+            margin-right: 0;
         }
 
         footer .social-icons a {
@@ -129,11 +129,12 @@
         footer .social-icons a:hover {
             transform: scale(1.1); /* Agrandissement au survol */
         }
+
         footer .map {
-            margin-top: 20px;
+            margin-top: 10px; /* Réduction de la marge supérieure */
             border-radius: 10px;
             overflow: hidden; /* Permet d'avoir des bords arrondis pour la carte */
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Réduction de l'effet d'ombre */
         }
     </style>
 </head>
@@ -162,7 +163,7 @@
             <img src="assets/images/member2.jpg" alt="Photo de M. Ciss">
             <h2>Salif Ciss</h2>
             <p>Responsable du Département IT</p>
-            <p>Ciss est un expert en technologies de l'information et en télécommunications, avec une solide expérience dans la gestion d'équipes et le développement de solutions innovantes.</p>
+            <a href=""></a>
         </div>
         <!-- Membre 3 -->
         <div class="team-member">
@@ -196,8 +197,22 @@
         <div class="team-member">
             <img src="assets/images/member7.jpg" alt="Photo de Ndeye Touty Sarr">
             <h2>Ndeye Touty Sarr</h2>
-            <p>Rôle : Stagiaire en Secrétariat</p>
+            <p>Spécialité : Stagiaire en Secrétariat</p>
             <p>Sarr contribue activement aux tâches administratives et acquiert des compétences précieuses dans la gestion et la coordination de projets.</p>
+        </div>
+        <!-- Membre 8 -->
+        <div class="team-member">
+            <img src="assets/images/member8.jpg" alt="Photo de Diary">
+            <h2>Diarry</h2>
+            <p>Spécialité : Comunity manager</p>
+            <p>Diarry est un expert en gestion des réseaux sociaux, créant du contenu engageant et interagissant avec la communauté pour renforcer la présence en ligne de l'IBMS.</p>
+        </div>
+        <!-- Membre 9 -->
+        <div class="team-member">
+            <img src="assets/images/member9.jpg" alt="Photo de Diary">
+            <h2>Tchanee Mbaye</h2>
+            <p>Spécialité : Comunity manager</p>
+            <p>Mbaye est un expert en gestion des réseaux sociaux, créant du contenu engageant et interagissant avec la communauté pour renforcer la présence en ligne de l'IBMS.</p>
         </div>
     </div>
 </body>

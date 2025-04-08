@@ -56,7 +56,7 @@
             display: flex;
             justify-content: space-between; /* Espace entre le texte et les icônes */
             align-items: center;
-            padding: 10px 20px;
+            padding: 5px 10px; /* Réduction de l'espacement interne */
             background-color: #3498db;
             color: white;
         }
@@ -67,8 +67,8 @@
 
         footer .social-icons {
             display: flex;
-            gap: 15px; /* Espacement entre les icônes */
-            margin-right: 0; /* Pour bien les positionner à droite */
+            gap: 10px; /* Réduction de l'espace entre les icônes */
+            margin-right: 0;
         }
 
         footer .social-icons a {
@@ -79,11 +79,12 @@
         footer .social-icons a:hover {
             transform: scale(1.1); /* Agrandissement au survol */
         }
+
         footer .map {
-            margin-top: 20px;
+            margin-top: 10px; /* Réduction de la marge supérieure */
             border-radius: 10px;
             overflow: hidden; /* Permet d'avoir des bords arrondis pour la carte */
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Réduction de l'effet d'ombre */
         }
     </style>
     <title>Document</title>
