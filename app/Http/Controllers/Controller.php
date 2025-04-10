@@ -1,10 +1,13 @@
 <?php
+namespace App\Http\Controllers; // Déclaration de l'espace de noms
 
-namespace App\Http\Controllers;
+use Illuminate\Support\Facades\Route; // Importation de la classe Route pour définir des routes dans l'application.
+use Illuminate\Support\Facades\Auth;  // Importation du module Auth pour gérer l'authentification.
+use Illuminate\Http\Request;  // Importation de Request pour manipuler les données des requêtes HTTP.
+use App\Http\Controllers\CourseController; // Importation du contrôleur CourseController pour gérer les cours.
+use App\Http\Controllers\BlogController; // Importation du contrôleur BlogController pour gérer les blogs.
 
-use Illuminate\Http\Request;
-
-class HomeController extends Controller
+class HomeController extends HomeController
 {
     public function index()
     {

@@ -4,6 +4,12 @@ use Illuminate\Support\Facades\Route; // Importation de la classe Route pour dé
 use Illuminate\Support\Facades\Auth;  // Importation du module Auth pour gérer l'authentification.
 use Illuminate\Http\Request;  // Importation de Request pour manipuler les données des requêtes HTTP.
 use App\Http\Controllers\CourseController; // Importation du contrôleur CourseController pour gérer les cours.
+use App\Http\Controllers\HomeController; // Importation du contrôleur HomeController pour gérer la page d'accueil.
+use App\Http\Controllers\BlogController; // Importation du contrôleur BlogController pour gérer les blogs.
+use App\Http\Controllers\ContactController; // Importation du contrôleur ContactController pour gérer les contacts.
+
+
+Route::get('/', [HomeController::class, 'index']);
 
 // Route pour la page d'accueil par défaut.
 Route::get('/', function () {
@@ -101,4 +107,44 @@ Route::post('/contact', function (Request $request) {
 // Route pour afficher la page de cours.
 Route::get('/formation', function () {
     return view('formation'); // Charge et renvoie la vue "team".
+});
+// Route pour afficher la page de blog.
+Route::get('/blog', function () {
+    return view('blog'); // Charge et renvoie la vue "blog".
+});
+// Route pour afficher la page de blog.
+Route::get('/blog/{id}', function ($id) {
+    return view('blog', ['id' => $id]); // Charge et renvoie la vue "blog" avec l'ID du blog.
+});
+// Route pour afficher la page de blog.
+Route::get('/blog/{id}/commentaires', function ($id) {
+    return view('commentaires', ['id' => $id]); // Charge et renvoie la vue "commentaires" avec l'ID du blog.
+});
+// Route pour afficher la page de blog.
+Route::get('/blog/{id}/commentaires/{commentaireId}', function ($id, $commentaireId) {
+    return view('commentaires', ['id' => $id, 'commentaireId' => $commentaireId]); // Charge et renvoie la vue "commentaires" avec l'ID du blog et de commentaire.
+});
+// Route pour afficher la page de blog.
+Route::get('/blog/{id}/commentaires/{commentaireId}/reponse', function ($id, $commentaireId) {
+    return view('reponse', ['id' => $id, 'commentaireId' => $commentaireId]); // Charge et renvoie la vue "reponse" avec l'ID du blog et de commentaire.
+});
+// Route pour afficher la page de blog.
+Route::get('/blog/{id}/commentaires/{commentaireId}/reponse/{reponseId}', function ($id, $commentaireId, $reponseId) {
+    return view('reponse', ['id' => $id, 'commentaireId' => $commentaireId, 'reponseId' => $reponseId]); // Charge et renvoie la vue "reponse" avec l'ID du blog, de commentaire et de réponse.
+});
+// Route pour afficher la page de blog.
+Route::get('/blog/{id}/commentaires/{commentaireId}/reponse/{reponseId}/modifier', function ($id, $commentaireId, $reponseId) {
+    return view('modifier', ['id' => $id, 'commentaireId' => $commentaireId, 'reponseId' => $reponseId]); // Charge et renvoie la vue "modifier" avec l'ID du blog, de commentaire et de réponse.
+});
+// Route pour afficher la page de blog.
+Route::get('/blog/{id}/commentaires/{commentaireId}/reponse/{reponseId}/supprimer', function ($id, $commentaireId, $reponseId) {
+    return view('supprimer', ['id' => $id, 'commentaireId' => $commentaireId, 'reponseId' => $reponseId]); // Charge et renvoie la vue "supprimer" avec l'ID du blog, de commentaire et de réponse.
+});
+// Route pour afficher la page de blog.
+Route::get('/blog/{id}/commentaires/{commentaireId}/reponse/{reponseId}/modifier/{modifierId}', function ($id, $commentaireId, $reponseId, $modifierId) {
+    return view('modifier', ['id' => $id, 'commentaireId' => $commentaireId, 'reponseId' => $reponseId, 'modifierId' => $modifierId]); // Charge et renvoie la vue "modifier" avec l'ID du blog, de commentaire et de réponse.
+});
+// Route pour afficher la page de blog.
+Route::get('/blog/{id}/commentaires/{commentaireId}/reponse/{reponseId}/supprimer/{supprimerId}', function ($id, $commentaireId, $reponseId, $supprimerId) {
+    return view('supprimer', ['id' => $id, 'commentaireId' => $commentaireId, 'reponseId' => $reponseId, 'supprimerId' => $supprimerId]); // Charge et renvoie la vue "supprimer" avec l'ID du blog, de commentaire et de réponse.
 });

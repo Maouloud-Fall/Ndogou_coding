@@ -7,22 +7,22 @@
     <title>Contactez-nous</title>
     <style>
         /* Style global */
-        body, html {
+        body {
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            height: 100%;
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f9;
-            display: flex;
-            flex-direction: column;
+            background-color: #e8f5e9;
         }
-
+        .h2 {
+            color: #3498db;
+            text-align: center;
+        }
         /* En-tête */
         header {
-            background-color: #3498db;
+            background-color:rgb(128, 130, 131);
             padding: 15px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            width: 100%;
+            color: white;
+            text-align: center;
         }
 
         header .menu {
@@ -35,7 +35,11 @@
             margin: 0;
             padding: 0;
             display: flex;
-            gap: 20px;
+            gap: 15px;
+        }
+
+        header .menu ul li {
+            display: inline-block;
         }
 
         header .menu ul li a {
@@ -50,22 +54,53 @@
         header .menu ul li a:hover {
             background-color: #1d6fa5;
         }
-
-        /* Style de base */
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f9;
-            margin: 0;
-            padding: 0;
+        .menu {
+            display: flex;
+            justify-content: space-between; /* Espace entre le logo et les liens */
+            align-items: center; /* Aligne verticalement les éléments */
+            padding: 15px 30px;
         }
 
+        .logo-container {
+            display: flex;
+            align-items: center;
+            margin-right: 20px; /* Espace entre le logo et les liens */
+            flex: 1; /* Permet au logo de prendre de l'espace flexible */
+        }
+
+        .logo {
+            width: 120px; /* Ajuste la taille du logo */
+            height: auto; /* Conserve les proportions */
+        }
+
+        .menu-links {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 20px; /* Ajoute un espacement entre les liens */
+        }
+
+        .menu-links li {
+            display: inline-block;
+        }
+
+        .menu-links a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            text-align: center; /* Centre le texte dans le lien */
+        }
+
+        .menu-links a:hover {
+            background-color: #1d6fa5; /* Couleur au survol */
+            transform: scale(1.1); /* Zoom léger au survol */
+        }
          /* Style global */
-         body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f9;
-        }
+        
 
         .container {
             display: flex;
@@ -136,37 +171,53 @@
         /* Pied de page */
         footer {
             display: flex;
-            justify-content: space-between; /* Espace entre le texte et les icônes */
-            align-items: center;
-            padding: 5px 10px; /* Réduction de l'espacement interne */
-            background-color: #3498db;
+            flex-direction: column; /* Aligne les éléments verticalement */
+            align-items: center; /* Centre les éléments horizontalement */
+            background-color: rgb(128, 130, 131); /* Couleur de fond du footer */
             color: white;
+            padding: 10px;
         }
 
-        footer p {
-            margin: 0;
+        .footer-container {
+            display: flex; /* Utilise flexbox pour aligner les sections horizontalement */
+            justify-content: space-between; /* Espace entre les sections */
+            width: 95%; /* Prend toute la largeur du footer */
         }
 
-        footer .social-icons {
-            display: flex;
-            gap: 10px; /* Réduction de l'espace entre les icônes */
-            margin-right: 0;
+        .footer-section {
+            margin: 10px; /* Espace entre les sections */
+            text-align: left; /* Aligne le texte à gauche par défaut */
+        }
+        .footer-section i {
+            margin-right: 8px; /* Espace entre l'icône et le texte */
+            color: red; /* Couleur des icônes */
+        }
+        .footer-section h4 {
+            margin-bottom: 10px; /* Espace sous le titre */
+            color: white; /* Couleur du titre */
         }
 
-        footer .social-icons a {
+        .footer-logo {
+            max-width: 150px; /* Ajustez la taille du logo */
+        }
+
+        .navigation-links ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .navigation-links li {
+            margin: 5px 0;
+        }
+
+        .navigation-links a {
+            color: white;
             text-decoration: none;
-            transition: transform 0.3s;
         }
 
-        footer .social-icons a:hover {
-            transform: scale(1.1); /* Agrandissement au survol */
-        }
-
-        footer .map {
-            margin-top: 10px; /* Réduction de la marge supérieure */
-            border-radius: 10px;
-            overflow: hidden; /* Permet d'avoir des bords arrondis pour la carte */
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Réduction de l'effet d'ombre */
+        .navigation-links a:hover {
+            text-decoration: none; /* Supprime la ligne au survol */
+            color:rgb(241, 8, 20); /* Change la couleur au survol */
         }
     </style>
 </head>
@@ -174,15 +225,31 @@
     <!-- En-tête -->
     <header>
         <nav class="menu">
-            <ul>
+            <div class="logo-container">
+                <img src="assets/images/logo.png" alt="Logo de Mon Site Web" class="logo">
+            </div>
+            <ul class="menu-links">
                 <li><a href="/accueil">Accueil</a></li>
                 <li><a href="/formation">Formation</a></li>
                 <li><a href="/about">À propos</a></li>
                 <li><a href="/team">Equipe</a></li>
+                <li><a href="/blog">Blog</a></li>
                 <li><a href="/contact">Contact</a></li>
             </ul>
         </nav>
     </header>
+    <!-- Carte de localisation -->
+    <div class="map">
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23335.743084304136!2d-16.9516021!3d14.7614194!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xec195590eebab6b%3A0x350740f27a87b582!2sR%C3%A9sidence%20Senghor%20-%20THI%C3%88S!5e0!3m2!1sfr!2ssn!4v1688475123456"
+            width="100%"
+            height="250"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            aria-label="Carte de Résidence Senghor à Thiès">
+        </iframe>
+    </div>
 
 <!-- Contenu principal -->  
 <div class="container">
@@ -223,29 +290,47 @@
 </body>
 <!-- Pied de page -->
 <footer>
+    <div class="footer-container">
+        <div class="footer-section logo-description">
+            <img src="assets/images/logo.png" alt="Logo de Mon Site Web" class="footer-logo">
+            <p>
+                <i class="fas fa-envelope"></i> 
+                <a href="mailto:ibmssenegal@gmail.com">ibmssenegal@gmail.com</a>
+            </p>
+            <p>
+                <i class="fas fa-phone"></i> 
+                339520979 | +221773962707
+            </p>
+            <p>
+                <i class=" fas fa-map-marker-alt"></i>
+                123 Rond point Angle Serigne Fallou, Thiès, Sénégal
+            </p>
+        </div>
+
+
+        <div class="footer-section navigation-links">
+            <h4>Menu de Navigation</h4>
+            <ul>
+                <li><a href="/accueil">Accueil</a></li>
+                <li><a href="/formation">Formation</a></li>
+                <li><a href="/about">À propos</a></li>
+                <li><a href="/team">Equipe</a></li>
+                <li><a href="/blog">Blog</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section social-media">
+            <h4>Veillez nous suivre sur les reseaux sociaux</h4>
+            <div class="social-icons">
+                <a href="https://facebook.com" target="_blank" aria-label="Facebook"><i class="fab fa-facebook fa-2x" style="color: #4267B2;"></i></a>
+                <a href="https://www.instagram.com/ibmssenegal" target="_blank" aria-label="Instagram"><i class="fab fa-instagram fa-2x" style="color: #C13584;"></i></a>
+                <a href="https://sn.linkedin.com/company/informatique-business-and-management-skills" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin fa-2x" style="color: #0A66C2;"></i></a>
+                <a href="https://www.tiktok.com/@ibmssenegal" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok fa-2x" style="color: #69C9D0;"></i></a>
+            </div>
+        </div>
+    </div>
+
     <p>© 2025 Mon Site Web. Tous droits réservés.</p>
-    <p>Contactez-nous : <a href="mailto:ibmssenegal@gmail.com">ibmssenegal@gmail.com</a></p>
-    
-    <!-- Icônes des réseaux sociaux -->
-    <div class="social-icons">
-        <a href="https://facebook.com" target="_blank" aria-label="Facebook"><i class="fab fa-facebook fa-2x" style="color: #4267B2;"></i></a>
-        <a href="https://www.instagram.com/ibmssenegal" target="_blank" aria-label="Instagram"><i class="fab fa-instagram fa-2x" style="color: #C13584;"></i></a>
-        <a href="https://sn.linkedin.com/company/informatique-business-and-management-skills" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin fa-2x" style="color: #0A66C2;"></i></a>
-        <a href="https://www.tiktok.com/@ibmssenegal" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok fa-2x" style="color: #69C9D0;"></i></a>
-    </div>
-
-    <!-- Carte de localisation -->
-    <div class="map">
-        <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23335.743084304136!2d-16.9516021!3d14.7614194!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xec195590eebab6b%3A0x350740f27a87b582!2sR%C3%A9sidence%20Senghor%20-%20THI%C3%88S!5e0!3m2!1sfr!2ssn!4v1688475123456"
-            width="100%"
-            height="250"
-            style="border:0;"
-            allowfullscreen=""
-            loading="lazy"
-            aria-label="Carte de Résidence Senghor à Thiès">
-        </iframe>
-
-    </div>
 </footer>
 </html>
